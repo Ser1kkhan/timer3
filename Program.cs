@@ -54,7 +54,7 @@ class TimerApp
         {
             Console.SetCursorPosition(0, timeLine);
             Console.WriteLine("Время вышло!                     ");
-            PlaySound("C:\\Users\\Admin\\source\\repos\\timer3\\zvuk\\vzryiv-vo-vremya-boya.wav");  // Замените на путь к вашему WAV-файлу
+            PlaySound("C:\\Users\\Admin\\source\\repos\\timer3\\zvuk\\vzryiv-vo-vremya-boya.wav");  
         }
 
         Console.WriteLine("Таймер остановлен.");
