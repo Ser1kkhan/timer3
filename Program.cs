@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading;
-using NAudio.Wave;  // Убедитесь, что библиотека NAudio подключена
+using NAudio.Wave;  
 
 class TimerApp
 {
@@ -15,13 +15,13 @@ class TimerApp
 
         Console.WriteLine("Таймер установлен на {0} секунд.", seconds);
         Console.WriteLine("Для паузы/возобновления нажмите 'p', для выхода - 'q'.");
-        Console.WriteLine(""); // Пустая строка для сообщений о паузе/возобновлении
+        Console.WriteLine("");
 
         int timeLine = Console.CursorTop - 1;
         int messageLine = Console.CursorTop;
         bool isPaused = false;
         string message = "";
-
+        
         while (seconds > 0)
         {
             if (!isPaused)
@@ -71,7 +71,7 @@ class TimerApp
                 outputDevice.Play();
                 while (outputDevice.PlaybackState == PlaybackState.Playing)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(100);
                 }
             }
         }
